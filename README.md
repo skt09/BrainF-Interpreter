@@ -45,7 +45,7 @@ For further knowledge referred to the [Wikipedia](https://en.wikipedia.org/wiki/
 The repository contains 3 files and 1 directory:
 
 1. <code>main.py</code>: A Python script containing a BrainF Interpreter.
-2. <code>BrainF.ipynb</code>: A Jupyter Notebook containing the Python script with detailed explaination and some explaination. This file can also be viwed properly with nbviwer from this [link](#).
+2. <code>BrainF.ipynb</code>: A Jupyter Notebook containing the Python script with detailed explaination and some explaination. This file can also be viwed properly with nbviwer from this [link](https://nbviewer.jupyter.org/github/skt09/BrainF-Interprter/blob/main/BrainF.ipynb).
 3.
 4. <code>Samples</code>: This folder contains some sample codes writen in BrainF.
 

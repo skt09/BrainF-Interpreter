@@ -120,10 +120,10 @@ def compilR(code, pairs):
 
     '''
     
-    tape = np.zeros(30000, dtype=np.uint8)
-    pos = []
-    index = 0
-    position = 0
+    tape = np.zeros(30000, dtype=np.uint8) # Allocating the memory strip for all the operations
+    pos = [] # List behaving as a stack to store the loops starting indices
+    index = 0 # Index in the tape array
+    position = 0 # Position of the pointer in the code
     
     while(position < len(code)):
         e = code[position]
@@ -167,7 +167,6 @@ def get_code():
     '''
     
     path = Path(input("Enter full the path to the BrainF file: "))
-    print()
     
     if path.exists:
         with open(path, mode="r") as file:

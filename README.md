@@ -67,7 +67,7 @@ The folder contains the C implementation for this Interpreter with a diferent ap
 
 The directory contains the needed custom C files for this project and the main driver program is situated in the <code>main.c</code> file.
 
-In order to run the program you have to open the Linux/mac terminal in the directory and run the make command beacause the directory includes a <code>Makefile</code> and then run **./brain** with the <filename> as command line argument.
+In order to run the program you have to open the Linux/mac terminal in the directory and run the make command beacause the directory includes a <code>Makefile</code> and then run **./brain** with the <code>filename</code> as command line argument.
 
 ### Samples
 

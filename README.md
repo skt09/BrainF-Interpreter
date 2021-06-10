@@ -33,7 +33,7 @@ The **[C](https://en.wikipedia.org/wiki/C_(programming_language))** equivalents 
 |<| --ptr;|
 |+| ++*ptr;|
 |-| --*ptr;|
-|.| printf("%c", (char)tape\[i\]);|
+|.| putchar((char)tape\[i\]);|
 |,|*ptr = getchar();|
 |\[|while (*ptr) {|
 |]|}|
@@ -46,7 +46,7 @@ The repository contains 2 files and 2 directory:
 
 1. <code>main.py</code>: A Python script containing a BrainF Interpreter.
 2. <code>BrainF.ipynb</code>: A Jupyter Notebook containing the Python script with detailed explaination and some explaination. This file can also be viwed properly with nbviwer from this [link](https://nbviewer.jupyter.org/github/skt09/BrainF-Interprter/blob/main/BrainF.ipynb).
-3. <code>C</code>: Contains BrainF Interpreter written in C and also the makefile to compile it.
+3. <code>c/brainf/source</code>: Contains BrainF Interpreter written in C and also the makefile to compile it.
 4. <code>Samples</code>: This folder contains some sample codes writen in BrainF.
 
 ### main.py
@@ -60,6 +60,14 @@ The file has four functions:
 3. get_pairs: The function determines the starting and ending position of the loops and
     make pairs of them.
 4. compilR: Compiles the BrainF code.
+
+### c/brainf/source
+
+The folder contains the C implementation for this Interpreter with a diferent approach and in a optimized way. This is the most optimised interpreter in this repository. The code is contributed by Soham Malakar.
+
+The directory contains the needed custom C files for this project and the main driver program is situated in the <code>main.c</code> file.
+
+In order to run the program you have to open the Linux/mac terminal in the directory and run the make command beacause the directory includes a <code>Makefile</code> and then run **./brain** with the <filename> as command line argument.
 
 ### Samples
 

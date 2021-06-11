@@ -6,8 +6,8 @@ CFLAGS=-Ofast
 brain: *.o
 	$(CC) $(CFLAGS) $^ -o $@
 
-%.o: %.c %.h
+%.o: %.c
 	$(CC) $(CFLAGS) -c $^
 
 clean:
-	rm *.o *.gch brain
+	rm *.o brain

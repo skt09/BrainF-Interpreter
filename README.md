@@ -1,4 +1,4 @@
-# BrainF Interprter
+# BrainF Interpreter
 #### Sanket Tarafder
 
 BrainF is an [esoteric programming language](https://en.wikipedia.org/wiki/Esoteric_programming_language) by Urban Müller. It is created in 1993.

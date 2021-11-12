@@ -76,7 +76,7 @@ The folder contains 9 sample BrainF codes.
 1. beers.b
 2. chars.b
 3. hellom.b
-4. manderbolt.b
+4. mandelbrot.b
 5. oobrain.b
 6. piCal.b
 7. random.b

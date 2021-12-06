@@ -38,7 +38,7 @@ The **[C](https://en.wikipedia.org/wiki/C_(programming_language))** equivalents 
 |\[|while (*ptr) {|
 |]|}|
 
-For further knowledge referred to the [Wikipedia](https://en.wikipedia.org/wiki/Brainfuck) page and you can find more Brainf Codes in this url[\(just click here\)](http://copy.sh/brainfuck/).
+For further knowledge referred to the [Wikipedia](https://en.wikipedia.org/wiki/Brainfuck) page and you can find more Brainf Codes in this url [\(just click here\)](http://copy.sh/brainfuck/).
 
 ## My Implementation
 

@@ -1,4 +1,4 @@
-﻿int Modulus(int x, int y)
+int Modulus(int x, int y)
 {
     return x - (x / y) * y;
 }
@@ -18,11 +18,14 @@ try
     sr.BaseStream.Seek(0, SeekOrigin.Begin);
     buffer = sr.ReadToEnd();
     sr.Close();
+    
     if (args.Length == 2)
         memorySize = Convert.ToInt32(args[1]);
+    
     tape = new int[memorySize];
     stack = new Stack<int>();
     pairs = new Dictionary<int, int>();
+    
     int i = 0;
     int temp;
     
@@ -52,6 +55,7 @@ try
                 }
                 break;
         }
+        
         i++;
         charCount++;
     }
@@ -60,11 +64,14 @@ try
         Console.WriteLine($"Syntax error: Unclosed bracket in line {lineCount} char {charCount}.");
         return;
     }
+    
     i = 0;
     int j = 0;
+    
     while (i < buffer.Length)
     {
         char c = buffer[i];
+        
         switch (c)
         {
             case '+':
@@ -101,6 +108,7 @@ try
                 tape[j] = (int)Console.Read();
                 break;
         }
+        
         i++;                    
     }
 }

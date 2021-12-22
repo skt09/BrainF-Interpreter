@@ -3,13 +3,14 @@
 #include <string>
 #include <stack>
 #include <vector>
+#include <cmath>
 #include <unordered_map>
 
 using namespace std;
 
 int modulo(int x, int y)
 {
-	return x - (x / y) * y;
+	return x - floor((float)x / (float)y) * y;
 }
 
 int main(int argc, char const *argv[])

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\soham\\OneDrive\\Documents\\Research\\csharp\\brainf\\brainf.csproj": {}
+    "C:\\Users\\soham\\OneDrive\\Documents\\Research\\BrainF-Interpreter\\BrainF-Interpreter\\csharp\\brainf\\brainf.csproj": {}
   },
   "projects": {
-    "C:\\Users\\soham\\OneDrive\\Documents\\Research\\csharp\\brainf\\brainf.csproj": {
+    "C:\\Users\\soham\\OneDrive\\Documents\\Research\\BrainF-Interpreter\\BrainF-Interpreter\\csharp\\brainf\\brainf.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\soham\\OneDrive\\Documents\\Research\\csharp\\brainf\\brainf.csproj",
+        "projectUniqueName": "C:\\Users\\soham\\OneDrive\\Documents\\Research\\BrainF-Interpreter\\BrainF-Interpreter\\csharp\\brainf\\brainf.csproj",
         "projectName": "brainf",
-        "projectPath": "C:\\Users\\soham\\OneDrive\\Documents\\Research\\csharp\\brainf\\brainf.csproj",
+        "projectPath": "C:\\Users\\soham\\OneDrive\\Documents\\Research\\BrainF-Interpreter\\BrainF-Interpreter\\csharp\\brainf\\brainf.csproj",
         "packagesPath": "C:\\Users\\soham\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\soham\\OneDrive\\Documents\\Research\\csharp\\brainf\\obj\\",
+        "outputPath": "C:\\Users\\soham\\OneDrive\\Documents\\Research\\BrainF-Interpreter\\BrainF-Interpreter\\csharp\\brainf\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\soham\\AppData\\Roaming\\NuGet\\NuGet.Config"

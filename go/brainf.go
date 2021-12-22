@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strconv"
+	"math"
 )
 
 func main() {
@@ -127,5 +128,5 @@ func main() {
 }
 
 func modulo(x, y int) int {
-	return x - (x / y) * y
+	return int(float64(x) - math.Floor(float64(x) / float64(y)) * float64(y))
 }

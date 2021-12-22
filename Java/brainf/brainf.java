@@ -7,7 +7,7 @@ public class brainf
 {
     static int Modulo(int x, int y)
     {
-    	return x - (x / y) * y;
+    	return (int)(x - Math.floor((float)x / (float)y) * y);
     }
 
     static int memorySize = 1024;

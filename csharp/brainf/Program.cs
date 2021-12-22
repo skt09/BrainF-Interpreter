@@ -1,6 +1,6 @@
 int Modulus(int x, int y)
 {
-    return x - (x / y) * y;
+    return (int)(x - Math.Floor((float)x / (float)y) * y);
 }
 
 int memorySize = 1024;

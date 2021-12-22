@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j77TMK1eQXUD1LPFBWDYppV4cqiFlVcrmFa5eBWvDIDDy904teBMJGHRwnocRiPI9m3unL/WeACH0MxM8GpZTA==",
+  "dgSpecHash": "/PZyDyy+TaeTCMbpw1UnnvoM/m9FxTze3R1SQyhlyzcvKUv5mu56euwzbF0cPnjYPwvavCQNicgOEyjSRQZayA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\soham\\OneDrive\\Documents\\Research\\csharp\\brainf\\brainf.csproj",
+  "projectFilePath": "C:\\Users\\soham\\OneDrive\\Documents\\Research\\BrainF-Interpreter\\BrainF-Interpreter\\csharp\\brainf\\brainf.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

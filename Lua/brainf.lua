@@ -65,7 +65,7 @@ end
 
 i, j = 1, 1
 
-while i < buffer_length do
+while i <= buffer_length do
     local c = string.sub(buffer, i, i)
 
     if c == "+" then

@@ -3,13 +3,11 @@ CC=gcc
 
 CFLAGS=-Ofast
 
-LFLAGS=-lm
-
-brain: *.o
-	$(CC) $(CFLAGS) $^ -o $@ $(LFLAGS)
+brainf: *.o
+	$(CC) $(CFLAGS) $^ -o $@
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $^ $(LFLAGS)
+	$(CC) $(CFLAGS) -c $^
 
 clean:
-	rm *.o brain
+	rm *.o brainf

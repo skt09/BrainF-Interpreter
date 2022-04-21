@@ -1,0 +1,209 @@
+
+MOV $mem_size 1024
+
+IF NEQ $ARGC 2
+[
+    IF NEQ $ARGC 3
+    [
+        PRT Usage: $0 <file> $LBR
+        PRT optional: memory-size, default: $mem_size
+        PRT $RBR $ENDL
+        BYE 1
+    ]
+]
+
+MOV $file $1
+
+FREAD $buf $file $except
+
+IF NEQ $except 0
+[
+    PRT $0
+    PRT : Error: $file
+    PRT : No such file $ENDL
+    BYE 1
+]
+
+IF EQL $ARGC 3
+[
+    MOV $mem_size $2
+]
+
+CALL len $buf
+RECV $len
+
+MOV $line_count 1
+MOV $char_count 1
+
+MOV $i 0
+STR $buf
+
+MOV $tos -1
+
+> $loop
+IF LSS $i $len
+[
+    ARRV $c $buf $i
+
+    IF SEQL $c $ENDL
+    [
+        ADD $line_count $line_count 1
+        INT $line_count $line_count
+        MOV $char_count 1
+        JMP $endif
+    ]
+    IF SEQL $c $LBR
+    [
+        JMP $push
+        > $push_ret
+
+        JMP $endif
+    ]
+    IF SEQL $c $RBR
+    [
+        IF EQL $tos -1
+        [
+            PRT $0
+            PRT : Error: $file
+            PRT : Unmatched '
+            PRT $RBR
+            PRT ' at line $line_count
+            PRT , char $char_count $ENDL
+            BYE 1
+        ]
+
+        JMP $pop
+        > $pop_ret
+
+        ARR $pairs $i $temp
+        ARR $pairs $temp $i
+    ]
+
+    > $endif
+
+    ADD $i $i 1
+    INT $i $i
+
+    JMP $loop
+]
+
+IF NEQ $tos -1
+[
+    PRT $0
+    PRT : Error: $file
+    PRT : Unmatched '
+    PRT $LBR
+    PRT ' at line $line_count
+    PRT , char $char_count $ENDL
+    BYE 1
+]
+
+MOV $i 0
+
+> $init
+IF LSS $i $mem_size
+[
+    ARR $tape $i 0
+    ADD $i $i 1
+    INT $i $i
+    JMP $init
+]
+
+MOV $i 0
+MOV $j 0
+
+MOV $MAX 256
+
+> $interpret
+IF LSS $i $len
+[
+    ARRV $c $buf $i
+
+    IF SEQL $c +
+    [
+        ARRV $temp $tape $j
+        EXPR $temp ( $temp + 1 ) % $MAX
+        INT $temp $temp
+        ARR $tape $j $temp
+        JMP $endif2
+    ]
+    IF SEQL $c -
+    [
+        ARRV $temp $tape $j
+        EXPR $temp ( $temp - 1 ) % $MAX
+        INT $temp $temp
+        ARR $tape $j $temp
+        JMP $endif2
+    ]
+    IF SEQL $c $LBR
+    [
+        ARRV $temp $tape $j
+
+        IF EQL $temp 0
+        [
+            ARRV $i $pairs $i
+        ]
+
+        JMP $endif2
+    ]
+    IF SEQL $c $RBR
+    [
+        ARRV $temp $tape $j
+
+        IF NEQ $temp 0
+        [
+            ARRV $i $pairs $i
+        ]
+
+        JMP $endif2
+    ]
+    IF SEQL $c <
+    [
+        EXPR $j ( $j - 1 ) % $mem_size
+        JMP $endif2
+    ]
+    IF SEQL $c >
+    [
+        EXPR $j ( $j + 1 ) % $mem_size
+        JMP $endif2
+    ]
+    IF SEQL $c .
+    [
+        ARRV $temp $tape $j
+        CHAR $temp $temp
+        PRT $temp
+        JMP $endif2
+    ]
+    IF SEQL $c ,
+    [
+        SCN $temp
+        ARR $tape $j $temp
+    ]
+
+    > $endif2
+
+    ADD $i $i 1
+    INT $i $i
+    JMP $interpret
+]
+
+BYE 0
+
+> $push
+
+ADD $tos $tos 1
+INT $tos $tos
+
+ARR $stk $tos $i
+
+JMP $push_ret
+
+
+> $pop
+
+ARRV $temp $stk $tos
+
+SUB $tos $tos 1
+INT $tos $tos
+
+JMP $pop_ret
